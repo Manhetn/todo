@@ -1,0 +1,10 @@
+{
+  "short_name": "todo",
+  "name": "todo",
+  "icons": [
+    {
+      "src": "favicon-32x32.png"
+    }
+  ],
+  "start_url": "."
+}

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/todo/static/css/main.f1b174fb.css",
+    "main.js": "/todo/static/js/main.3ee818c0.js",
+    "static/media/JosefinSans-Regular.ttf": "/todo/static/media/JosefinSans-Regular.0e82e3d2c82cf1e38a33.ttf",
+    "static/media/JosefinSans-Bold.ttf": "/todo/static/media/JosefinSans-Bold.a3a7c833253b917d3b74.ttf",
+    "static/media/bg-desktop-light.jpg": "/todo/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todo/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/todo/index.html",
+    "main.f1b174fb.css.map": "/todo/static/css/main.f1b174fb.css.map",
+    "main.3ee818c0.js.map": "/todo/static/js/main.3ee818c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1b174fb.css",
+    "static/js/main.3ee818c0.js"
+  ]
+}
