@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: $fw-regular;
+  src: url('../../assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: $fw-bold;
+  src: url('../../assets/fonts/JosefinSans-Bold.ttf') format('truetype');
+}

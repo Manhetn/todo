@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.header {
+  width: 100%;
+  padding: 78px 0 22px 0;
+  color: white;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  &__container {
+    max-width: 590px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-left: 1px;
+    font-size: 40px;
+    letter-spacing: 14.8px;
+    line-height: 100%;
+    font-weight: $fw-bold;
+  }
+
+  &__button-toggle-theme {
+    margin-top: 2px;
+    color: #fff;
+    align-self: flex-start;
+    padding-top: 1px;
+  }
+
+  &--dark {
+    background-image: url(../../../assets/images/bg-desktop-dark.jpg);
+  }
+
+  &--light {
+    background-image: url(../../../assets/images/bg-desktop-light.jpg);
+  }
+}

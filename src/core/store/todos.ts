@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { INewTodo, ITodo } from '../../types/data';
 import { nanoid } from 'nanoid';
-import { RootState } from './store';
+import { RootState, AppDispatch } from './store';
 
 interface ITodosState {
   list: ITodo[];
@@ -33,13 +33,21 @@ const todoSlice = createSlice({
     removeTodo: (state, action: PayloadAction<ITodo>) => {
       state.list = state.list.filter((todo) => todo._id !== action.payload._id);
     },
+    updateTodoes: (state, action: PayloadAction<ITodo[]>) => {
+      state.list = action.payload;
+    },
   },
 });
 
 const { reducer: todosReducer, actions } = todoSlice;
 
-export const { addTodo, toggleComplete, removeTodo } = actions;
+export const { addTodo, toggleComplete, removeTodo, updateTodoes } = actions;
 
 export const getTodoes = () => (state: RootState) => state.todos.list;
+
+export const updateTodoesList =
+  (payload: ITodo[]) => (dispatch: AppDispatch) => {
+    dispatch(updateTodoes(payload));
+  };
 
 export default todosReducer;

@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.footer {
+  width: 100%;
+  padding: 24px 0 41px;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+
+  &__container {
+    max-width: 1440px;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &--dark {
+    color: $color-dt-grayish-blue-dark;
+  }
+
+  &--light {
+    color: $color-lt-grayish-blue;
+  }
+}

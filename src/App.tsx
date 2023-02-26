@@ -1,12 +1,18 @@
-import Header from './components/ui/Header/Header';
+import Footer from './components/ui/Footer';
+import Header from './components/ui/Header';
+import RootContainer from './containers/RootContainer';
+import MainContainer from './containers/MainContainer';
 import TodosPage from './pages/TodosPage';
 
 const App: React.FC = () => {
   return (
-    <div className="root">
+    <RootContainer>
       <Header />
-      <TodosPage />
-    </div>
+      <MainContainer>
+        <TodosPage />
+      </MainContainer>
+      <Footer />
+    </RootContainer>
   );
 };
 

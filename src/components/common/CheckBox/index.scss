@@ -1,0 +1,68 @@
+@import '../../../styles/variables.scss';
+
+.check-box {
+  width: 48px;
+  height: 48px;
+  position: relative;
+
+  &__input {
+    display: none;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 11.5px;
+    left: 11.5px;
+    z-index: 1;
+    border: 1px solid;
+    border-radius: 50%;
+    transition: all 0.3 ease;
+
+    &:not(.check-box__checkbox--checked):hover {
+      border-width: 0;
+      padding: 1px;
+      background: linear-gradient(
+        120deg,
+        $color-background-first,
+        $color-background-second
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &--checked {
+      border-width: 0;
+      background: linear-gradient(
+        120deg,
+        $color-background-first,
+        $color-background-second
+      );
+    }
+  }
+
+  &__icon-check {
+    position: absolute;
+    top: calc(50% - 4.5px);
+    left: calc(50% - 5.5px);
+    z-index: 2;
+  }
+
+  &--dark {
+    .check-box__checkbox {
+      border-color: $color-dt-grayish-blue-very-dark;
+    }
+  }
+
+  &--light {
+    .check-box__checkbox {
+      border-color: $color-lt-grayish-blue-lightest;
+    }
+  }
+}

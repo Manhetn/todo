@@ -1,19 +1,24 @@
+import './index.scss';
+
 import { useState } from 'react';
 
-import useAppDispatch from '../../../core/hooks/useAppDispatch';
-import { addTodo } from '../../../core/store/todos';
-import CheckBox from '../../common/CheckBox/CheckBox';
-import EntryField from '../../common/EntryField/EntryField';
 import { INewTodo } from '../../../types/data';
+import CheckBox from '../../common/CheckBox';
+import EntryField from '../../common/EntryField';
+
+interface ITodoFormProps {
+  classes?: string;
+  addTodoHandler: (todo: INewTodo) => void;
+}
 
 const defaultTodo = {
   title: '',
   complete: false,
 };
 
-const TodoForm: React.FC = () => {
+const TodoForm: React.FC<ITodoFormProps> = ({ classes, addTodoHandler }) => {
   const [newTodo, setNewTodo] = useState<INewTodo>(defaultTodo);
-  const dispatch = useAppDispatch();
+  const classList = `todo-form${classes ? ' ' + classes : ''}`;
 
   const changeTitle = (vlaue: string): void => {
     setNewTodo((prev) => ({ ...prev, title: vlaue }));
@@ -26,14 +31,18 @@ const TodoForm: React.FC = () => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (newTodo.title.trim()) {
-      dispatch(addTodo(newTodo));
+      addTodoHandler(newTodo);
       setNewTodo(defaultTodo);
     }
   };
 
   return (
-    <form className="todo-form" onSubmit={(e) => submitHandler(e)}>
-      <CheckBox checked={newTodo.complete} onChangeHandler={changeComplete} />
+    <form className={classList} onSubmit={(e) => submitHandler(e)}>
+      <CheckBox
+        classes="todo-form__checkbox"
+        checked={newTodo.complete}
+        onChangeHandler={changeComplete}
+      />
       <EntryField value={newTodo.title} onChangeHandler={changeTitle} />
     </form>
   );

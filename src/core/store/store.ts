@@ -17,6 +17,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import todosReducer from './todos';
+import themeReducer from './theme';
 
 const persistConfig = {
   key: 'root',
@@ -25,6 +26,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   todos: todosReducer,
+  theme: themeReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

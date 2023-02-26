@@ -1,0 +1,76 @@
+@import '../../../styles/variables.scss';
+
+.todo-item {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border-bottom: 1px solid;
+  background-color: inherit;
+
+  &:first-child {
+    padding: 8px 12px 7px;
+  }
+
+  &:hover {
+    .todo-item__button-cross {
+      opacity: 1;
+    }
+  }
+
+  &__todo {
+    padding: 0 12px;
+    text-align: start;
+    margin-right: auto;
+    flex-grow: 0;
+    width: fit-content;
+    max-width: 82.6%;
+
+    &--complited {
+      text-decoration: line-through;
+    }
+  }
+
+  &__title,
+  &__button-cross {
+    color: inherit;
+  }
+
+  &__title {
+    letter-spacing: -0.3px;
+    line-height: 100%;
+  }
+
+  &__button-cross {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  &--dark {
+    color: $color-dt-grayish-blue-light;
+    border-color: $color-dt-grayish-blue-very-dark;
+
+    #{$this}__todo {
+      &--complited {
+        color: $color-dt-grayish-blue-very-dark;
+      }
+    }
+  }
+
+  &--light {
+    color: $color-lt-grayish-blue-darkest;
+    border-color: $color-lt-grayish-blue-lightest;
+
+    #{$this}__todo {
+      &--complited {
+        color: $color-lt-grayish-blue-light;
+      }
+    }
+  }
+}

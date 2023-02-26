@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.filter-list {
+  $this: &;
+
+  display: flex;
+  gap: 18px;
+
+  &__item {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: $fw-bold;
+
+    &--active,
+    &--active:hover {
+      color: $color-primary-bright-blue;
+      pointer-events: none;
+    }
+
+    &:first-child {
+      margin-right: 2px;
+    }
+  }
+
+  &--dark {
+    #{$this}__item:hover {
+      color: $color-dt-grayish-blue-lightest;
+    }
+  }
+
+  &--light {
+    #{$this}__item:hover {
+      color: $color-lt-grayish-blue-darkest;
+    }
+  }
+}

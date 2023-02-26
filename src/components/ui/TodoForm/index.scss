@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+
+.todo-form {
+  width: 100%;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+  &--dark {
+    background-color: $color-dt-blue-darkest-desaturated;
+  }
+
+  &--light {
+    background-color: $color-lt-gray-light;
+  }
+}
