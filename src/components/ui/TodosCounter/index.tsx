@@ -1,6 +1,5 @@
-import './index.scss';
-
 import { ITodo } from '../../../types/data';
+import './index.scss';
 
 interface ITodosCounterProps {
   todos: ITodo[];

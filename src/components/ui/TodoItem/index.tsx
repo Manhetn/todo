@@ -1,8 +1,5 @@
-import './index.scss';
-
 import { useDispatch } from 'react-redux';
 import { Draggable } from 'react-beautiful-dnd';
-
 import useAppSelector from '../../../core/hooks/useAppSelector';
 import { removeTodo, toggleComplete } from '../../../core/store/todos';
 import { getTheme } from '../../../core/store/theme';
@@ -10,6 +7,7 @@ import { ITodo } from '../../../types/data';
 import CheckBox from '../../common/CheckBox';
 import SimpleButton from '../../common/SimpleButton';
 import { SvgCross } from '../../common/Icons';
+import './index.scss';
 
 interface ToDoItemProps {
   todo: ITodo;

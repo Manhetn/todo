@@ -1,12 +1,10 @@
-import './index.scss';
-
 import { useState } from 'react';
-
+import useAppSelector from '../../../core/hooks/useAppSelector';
+import { getTheme } from '../../../core/store/theme';
 import { INewTodo } from '../../../types/data';
 import CheckBox from '../../common/CheckBox';
 import EntryField from '../../common/EntryField';
-import useAppSelector from '../../../core/hooks/useAppSelector';
-import { getTheme } from '../../../core/store/theme';
+import './index.scss';
 
 interface ITodoFormProps {
   classes?: string;

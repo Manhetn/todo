@@ -1,21 +1,16 @@
-import './index.scss';
-
+import { useState } from 'react';
 import { DropResult } from 'react-beautiful-dnd';
 import useAppSelector from '../../core/hooks/useAppSelector';
 import useAppDispatch from '../../core/hooks/useAppDispatch';
 import { addTodo, getTodoes, updateTodoesList } from '../../core/store/todos';
-import { reorder } from '../../core/utils/beautifulDndHalpers';
-
+import { getTheme } from '../../core/store/theme';
+import { ITodo } from '../../types/data';
 import TodoForm from '../../components/ui/TodoForm';
 import TodoList from '../../components/ui/TodoList';
-// import SimpleButton from '../../components/common/SimpleButton';
-// import TodosFilter from '../../components/ui/TodosFilter';
-// import TodosCounter from '../../components/ui/TodosCounter';
-import { useState } from 'react';
-import { ITodo } from '../../types/data';
-import { getTheme } from '../../core/store/theme';
 import Container from '../../containers/Container';
 import TodosFilterBar from '../../components/ui/TodosFilterBar';
+import { reorder } from '../../core/utils/beautifulDndHalpers';
+import './index.scss';
 
 const TodosPage: React.FC = () => {
   const theme = useAppSelector(getTheme());

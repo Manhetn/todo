@@ -1,12 +1,10 @@
-import './index.scss';
-
 import useAppSelector from '../../../core/hooks/useAppSelector';
 import useAppDispatch from '../../../core/hooks/useAppDispatch';
 import { changeTheme, getTheme } from '../../../core/store/theme';
-
 import Container from '../../../containers/Container';
 import SimpleButton from '../../common/SimpleButton';
 import { SvgMoon, SvgSun } from '../../common/Icons';
+import './index.scss';
 
 const Header: React.FC = () => {
   const theme = useAppSelector(getTheme());

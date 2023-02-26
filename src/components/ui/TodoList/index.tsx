@@ -1,10 +1,9 @@
-import './index.scss';
-
 import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
-import { ITodo } from '../../../types/data';
-import TodoItem from '../TodoItem';
 import useAppSelector from '../../../core/hooks/useAppSelector';
 import { getTheme } from '../../../core/store/theme';
+import { ITodo } from '../../../types/data';
+import TodoItem from '../TodoItem';
+import './index.scss';
 
 interface ITodoListProps {
   todos: ITodo[];

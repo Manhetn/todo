@@ -1,7 +1,6 @@
-import './index.scss';
-
 import useAppSelector from '../../../core/hooks/useAppSelector';
 import { getTheme } from '../../../core/store/theme';
+import './index.scss';
 
 interface ITodosFilterProps {
   currentFilter: string;

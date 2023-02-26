@@ -1,8 +1,7 @@
-import './index.scss';
-
 import useAppSelector from '../../core/hooks/useAppSelector';
 import { getTheme } from '../../core/store/theme';
 import { ReactNode } from 'react';
+import './index.scss';
 
 interface IRootContainerProps {
   children: ReactNode;

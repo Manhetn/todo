@@ -6,9 +6,6 @@ import TodosCounter from '../TodosCounter';
 import TodosFilter from '../TodosFilter';
 import './index.scss';
 
-// import useAppSelector from '../../../core/hooks/useAppSelector';
-// import { getTheme } from '../../../core/store/theme';
-
 interface ITodosFilterBarProps {
   currentFilter: string;
   todos: ITodo[];

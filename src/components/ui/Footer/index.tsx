@@ -1,7 +1,6 @@
-import './index.scss';
-
 import useAppSelector from '../../../core/hooks/useAppSelector';
 import { getTheme } from '../../../core/store/theme';
+import './index.scss';
 
 const Footer: React.FC = () => {
   const theme = useAppSelector(getTheme());
