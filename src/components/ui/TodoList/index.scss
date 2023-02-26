@@ -1,19 +1,43 @@
 @import '../../../styles/variables.scss';
 
 .todo-list {
+  $this: &;
+
   width: 100%;
   background-color: inherit;
   border-top-right-radius: $base-radius;
   border-top-left-radius: $base-radius;
   overflow: hidden;
 
+  &--empty {
+    padding: 23px $area-base-small;
+    border-bottom: 1px solid;
+  }
+
+  &__empty-text {
+    padding: 0 $area-base-small;
+    text-align: center;
+    letter-spacing: -0.3px;
+    line-height: 100%;
+  }
+
   &--dark {
     background-color: $color-dt-blue-darkest-desaturated;
     box-shadow: $shadow-dt-dark;
   }
 
+  &--dark#{$this}--empty {
+    color: $color-dt-grayish-blue-light;
+    border-color: $color-dt-grayish-blue-very-dark;
+  }
+
   &--light {
     background-color: $color-white;
     box-shadow: $shadow-lt-dark;
+  }
+
+  &--light#{$this}--empty {
+    color: $color-lt-grayish-blue-darkest;
+    border-color: $color-lt-grayish-blue-lightest;
   }
 }

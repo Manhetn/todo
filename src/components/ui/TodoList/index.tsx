@@ -21,6 +21,16 @@ const TodoList: React.FC<ITodoListProps> = ({
     classes ? ' ' + classes : ''
   }`;
 
+  if (!todos.length) {
+    const newClassList = `${classList} todo-list--empty`;
+
+    return (
+      <div className={newClassList}>
+        <p className="todo-list__empty-text">Here will be your todos</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <DragDropContext onDragEnd={dragEndHandler}>
