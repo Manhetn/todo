@@ -35,4 +35,9 @@
       color: $color-lt-grayish-blue-darkest;
     }
   }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    justify-content: center;
+  }
 }

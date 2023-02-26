@@ -24,10 +24,12 @@
   }
 
   &__button-toggle-theme {
+    width: 26px;
+    height: 26px;
     margin-top: 2px;
+    padding-top: 1px;
     color: #fff;
     align-self: flex-start;
-    padding-top: 1px;
   }
 
   &--dark {
@@ -36,5 +38,30 @@
 
   &--light {
     background-image: url(../../../assets/images/bg-desktop-light.jpg);
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0 22px 0;
+    height: 200px;
+
+    &__logo {
+      font-size: 26px;
+      letter-spacing: 10.8px;
+    }
+
+    &__button-toggle-theme {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--dark {
+      background-image: url(../../../assets/images/bg-mobile-dark.jpg);
+    }
+
+    &--light {
+      background-image: url(../../../assets/images/bg-mobile-light.jpg);
+    }
   }
 }

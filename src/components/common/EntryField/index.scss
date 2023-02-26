@@ -14,6 +14,10 @@
     line-height: 100%;
     color: inherit;
     background-color: transparent;
+
+    &::placeholder {
+      color: $color-dt-grayish-blue-dark;
+    }
   }
 
   &--dark {
@@ -22,5 +26,15 @@
 
   &--light {
     color: $color-lt-grayish-blue-darkest;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+    height: 32px;
+
+    &__input {
+      padding: 4px 6px;
+      letter-spacing: -0.2px;
+    }
   }
 }

@@ -10,8 +10,7 @@ export const SvgSun: React.FC<ISvgProps> = ({ classes }) => {
   return (
     <svg
       className={classList}
-      width="26"
-      height="26"
+      viewBox="0 0 26 26"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -23,33 +22,13 @@ export const SvgSun: React.FC<ISvgProps> = ({ classes }) => {
   );
 };
 
-export const SvgCross: React.FC<ISvgProps> = ({ classes }) => {
-  const classList = `icon${classes ? ' ' + classes : ''}`;
-
-  return (
-    <svg
-      className={classList}
-      width="18"
-      height="18"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        d="m16.97 0 .708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-      />
-    </svg>
-  );
-};
-
 export const SvgMoon: React.FC<ISvgProps> = ({ classes }) => {
   const classList = `icon${classes ? ' ' + classes : ''}`;
 
   return (
     <svg
       className={classList}
-      width="26"
-      height="26"
+      viewBox="0 0 26 26"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -67,8 +46,7 @@ export const SvgCheck: React.FC<ISvgProps> = ({ classes }) => {
   return (
     <svg
       className={classList}
-      width="11px"
-      height="9px"
+      viewBox="0 0 11 9"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -76,6 +54,24 @@ export const SvgCheck: React.FC<ISvgProps> = ({ classes }) => {
         stroke="#FFF"
         strokeWidth={2}
         d="M1 4.304 3.696 7l6-6"
+      />
+    </svg>
+  );
+};
+
+export const SvgCross: React.FC<ISvgProps> = ({ classes }) => {
+  const classList = `icon${classes ? ' ' + classes : ''}`;
+
+  return (
+    <svg
+      className={classList}
+      viewBox="0 0 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="m16.97 0 .708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
       />
     </svg>
   );

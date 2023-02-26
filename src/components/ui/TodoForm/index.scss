@@ -5,13 +5,23 @@
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  border-radius: 4px;
+  border-radius: $base-radius;
+
+  &__checkbox {
+    flex-shrink: 0;
+  }
 
   &--dark {
     background-color: $color-dt-blue-darkest-desaturated;
+    box-shadow: $shadow-dt-dark;
   }
 
   &--light {
-    background-color: $color-lt-gray-light;
+    background-color: $color-white;
+    box-shadow: $shadow-lt-light;
+  }
+
+  @media (max-width: 640px) {
+    // padding: 8px 14.5px;
   }
 }

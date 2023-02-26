@@ -23,4 +23,8 @@
   &--light {
     color: $color-lt-grayish-blue;
   }
+
+  @media (max-width: 640px) {
+  padding-bottom: 69px;
+  }
 }

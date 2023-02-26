@@ -3,6 +3,8 @@ import './index.scss';
 import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
 import { ITodo } from '../../../types/data';
 import TodoItem from '../TodoItem';
+import useAppSelector from '../../../core/hooks/useAppSelector';
+import { getTheme } from '../../../core/store/theme';
 
 interface ITodoListProps {
   todos: ITodo[];
@@ -15,16 +17,18 @@ const TodoList: React.FC<ITodoListProps> = ({
   classes,
   dragEndHandler,
 }) => {
+  const theme = useAppSelector(getTheme());
+  const classList = `todo-list todo-list--${theme}${
+    classes ? ' ' + classes : ''
+  }`;
+
   return (
     <>
       <DragDropContext onDragEnd={dragEndHandler}>
         <Droppable droppableId="droppable-todos-list">
-          {(provided, snapshot) => (
+          {(provided) => (
             <ul
-              className={
-                (classes ? 'todo-list ' + classes : 'todo-list') +
-                (snapshot.isDraggingOver ? ' dragactive' : '')
-              }
+              className={classList}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >

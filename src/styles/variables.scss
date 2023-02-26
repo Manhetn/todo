@@ -19,6 +19,15 @@ $color-lt-grayish-blue-light: hsl(233, 11%, 84%);
 $color-lt-grayish-blue: hsl(236, 9%, 61%);
 $color-lt-grayish-blue-darkest: hsl(235, 19%, 35%);
 
+$shadow-lt-light: 0px 43px 48px -11px rgba(
+    $color: $color-lt-grayish-blue-light,
+    $alpha: 0.3,
+  );
+$shadow-lt-dark: 0px 43px 48px -11px rgba(
+    $color: $color-lt-grayish-blue-darkest,
+    $alpha: 0.2,
+  );
+
 // Dark Theme
 $color-dt-blue-darkest: hsl(235, 21%, 11%);
 $color-dt-blue-darkest-desaturated: hsl(235, 24%, 19%);
@@ -28,8 +37,16 @@ $color-dt-grayish-blue-dark: hsl(234, 11%, 52%);
 $color-dt-grayish-blue-very-dark: hsl(233, 14%, 35%);
 $color-dt-grayish-blue-very-darkest: hsl(237, 14%, 26%); // unused !
 
+$shadow-dt-dark: 0px 43px 48px -11px rgba(
+    $color: $color-black,
+    $alpha: 0.4,
+  );
+
+$base-radius: 5px;
+
 // Typography
 $fs-base: 18px;
+$fs-base-small: 12px;
 $ff-Josefin-Sans: 'Josefin Sans', 'Be Vietnam Pro', sans-serif;
 $fw-regular: 400;
 $fw-bold: 700;

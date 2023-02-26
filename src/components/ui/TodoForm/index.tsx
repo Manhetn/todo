@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { INewTodo } from '../../../types/data';
 import CheckBox from '../../common/CheckBox';
 import EntryField from '../../common/EntryField';
+import useAppSelector from '../../../core/hooks/useAppSelector';
+import { getTheme } from '../../../core/store/theme';
 
 interface ITodoFormProps {
   classes?: string;
@@ -17,8 +19,11 @@ const defaultTodo = {
 };
 
 const TodoForm: React.FC<ITodoFormProps> = ({ classes, addTodoHandler }) => {
+  const theme = useAppSelector(getTheme());
   const [newTodo, setNewTodo] = useState<INewTodo>(defaultTodo);
-  const classList = `todo-form${classes ? ' ' + classes : ''}`;
+  const classList = `todo-form todo-form--${theme}${
+    classes ? ' ' + classes : ''
+  }`;
 
   const changeTitle = (vlaue: string): void => {
     setNewTodo((prev) => ({ ...prev, title: vlaue }));
@@ -43,7 +48,11 @@ const TodoForm: React.FC<ITodoFormProps> = ({ classes, addTodoHandler }) => {
         checked={newTodo.complete}
         onChangeHandler={changeComplete}
       />
-      <EntryField value={newTodo.title} onChangeHandler={changeTitle} />
+      <EntryField
+        value={newTodo.title}
+        placeholder="Create a new todo..."
+        onChangeHandler={changeTitle}
+      />
     </form>
   );
 };

@@ -19,4 +19,8 @@
   &--light {
     background-color: $color-lt-gray-light;
   }
+
+  @media (max-width: 640px) {
+    font-size: $fs-base-small;
+  }
 }

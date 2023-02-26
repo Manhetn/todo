@@ -51,7 +51,7 @@ const TodoItem: React.FC<ToDoItemProps> = ({ todo, classes, index }) => {
             classes="todo-item__button-cross"
             onClickHandler={() => dispatch(removeTodo(todo))}
           >
-            <SvgCross />
+            <SvgCross classes="todo-item__icon-cross" />
           </SimpleButton>
         </li>
       )}

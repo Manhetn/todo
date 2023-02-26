@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+.todos-filter-bar {
+  $this: &;
+
+  width: 100%;
+  border-bottom-right-radius: $base-radius;
+  border-bottom-left-radius: $base-radius;
+  display: flex;
+  align-items: center;
+  padding: 18px 24px 16.5px;
+  font-size: 14px;
+  line-height: 105%;
+  letter-spacing: -0.2px;
+
+  &__counter {
+    margin-right: auto;
+  }
+
+  &__clear-completed-button {
+    letter-spacing: -0.2px;
+    margin-left: 58px;
+    line-height: 100%;
+    transition: color 0.3s ease;
+  }
+
+  &--dark {
+    background-color: $color-dt-blue-darkest-desaturated;
+    color: $color-dt-grayish-blue-dark;
+    box-shadow: $shadow-dt-dark;
+
+    #{$this}__clear-completed-button:hover {
+      color: $color-dt-grayish-blue-lightest;
+    }
+  }
+
+  &--light {
+    background-color: $color-white;
+    color: $color-lt-grayish-blue;
+    box-shadow: $shadow-lt-dark;
+
+    #{$this}__clear-completed-button:hover {
+      color: $color-lt-grayish-blue-darkest;
+    }
+  }
+
+  @media (max-width: 640px) {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 84px;
+    font-size: $fs-base-small;
+    padding: 18px 20px 19.5px;
+
+    &__filter {
+      position: absolute;
+      bottom: -64px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      padding: 18px 24px 16px;
+      border-radius: $base-radius;
+      background-color: inherit;
+    }
+  }
+}

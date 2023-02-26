@@ -3,24 +3,25 @@
 .check-box {
   width: 48px;
   height: 48px;
-  position: relative;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__input {
     display: none;
   }
 
   &__checkbox {
-    cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 25px;
     width: 25px;
-    position: absolute;
-    top: 11.5px;
-    left: 11.5px;
-    z-index: 1;
     border: 1px solid;
     border-radius: 50%;
-    transition: all 0.3 ease;
+    cursor: pointer;
+    // transition: all 0.3 ease;
 
     &:not(.check-box__checkbox--checked):hover {
       border-width: 0;
@@ -48,10 +49,8 @@
   }
 
   &__icon-check {
-    position: absolute;
-    top: calc(50% - 4.5px);
-    left: calc(50% - 5.5px);
-    z-index: 2;
+    width: 11px;
+    height: 9px;
   }
 
   &--dark {
@@ -63,6 +62,21 @@
   &--light {
     .check-box__checkbox {
       border-color: $color-lt-grayish-blue-lightest;
+    }
+  }
+
+  @media (max-width: 640px) {
+    width: 32px;
+    height: 32px;
+
+    &__checkbox {
+      height: 20px;
+      width: 20px;
+    }
+
+    &__icon-check {
+      width: 10px;
+      height: 7.5px;
     }
   }
 }

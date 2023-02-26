@@ -2,4 +2,8 @@
 
 .main-container {
   margin-top: -142px;
+
+  @media (max-width: 640px) {
+    margin-top: -92px;
+  }
 }

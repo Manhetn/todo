@@ -8,13 +8,14 @@ import { reorder } from '../../core/utils/beautifulDndHalpers';
 
 import TodoForm from '../../components/ui/TodoForm';
 import TodoList from '../../components/ui/TodoList';
-import SimpleButton from '../../components/common/SimpleButton';
-import TodosFilter from '../../components/ui/TodosFilter';
-import TodosCounter from '../../components/ui/TodosCounter';
+// import SimpleButton from '../../components/common/SimpleButton';
+// import TodosFilter from '../../components/ui/TodosFilter';
+// import TodosCounter from '../../components/ui/TodosCounter';
 import { useState } from 'react';
 import { ITodo } from '../../types/data';
 import { getTheme } from '../../core/store/theme';
 import Container from '../../containers/Container';
+import TodosFilterBar from '../../components/ui/TodosFilterBar';
 
 const TodosPage: React.FC = () => {
   const theme = useAppSelector(getTheme());
@@ -57,30 +58,22 @@ const TodosPage: React.FC = () => {
   return (
     <section className={`todos todos--${theme}`}>
       <Container classes="todos__container">
-        <div className="todos__wripper">
-          <TodoForm addTodoHandler={(newTodo) => dispatch(addTodo(newTodo))} />
-        </div>
-        <div className="todos__wripper">
-          <TodoList
-            todos={filterTodos()}
-            classes="todos__list"
-            dragEndHandler={dragEndHandler}
-          />
-          <div className="todos__footer">
-            <TodosCounter todos={todos} classes="todos__counter" />
-            <TodosFilter
-              currentFilter={filter}
-              classes="todos__filters"
-              changeFilterHandler={setFilter}
-            />
-            <SimpleButton
-              classes="todos__clear-completed-button"
-              onClickHandler={removeCompletedTodos}
-            >
-              Clear Completed
-            </SimpleButton>
-          </div>
-        </div>
+        <TodoForm
+          classes="todos__form"
+          addTodoHandler={(newTodo) => dispatch(addTodo(newTodo))}
+        />
+        <TodoList
+          todos={filterTodos()}
+          classes="todos__list"
+          dragEndHandler={dragEndHandler}
+        />
+        <TodosFilterBar
+          todos={todos}
+          currentFilter={filter}
+          classes="todos__filter-bar"
+          changeFilterHandler={setFilter}
+          removeCompletedTodosHandler={removeCompletedTodos}
+        />
       </Container>
     </section>
   );
