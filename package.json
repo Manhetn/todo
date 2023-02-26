@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "Easy project using React, Redux/toolkit, typescript, HTML, SCSS",
-  "homepage": "https://Manhetn.github.io/todo",
+  "homepage": "https://manhetn.github.io/todo",
   "keywords": [
     "React",
     "Redux/toolkit",
@@ -22,7 +22,7 @@
     "@types/node": "17.0.45",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "gh-pages": "^5.0.0",
+    "gh-pages": "5.0.0",
     "nanoid": "4.0.1",
     "react": "18.2.0",
     "react-beautiful-dnd": "13.1.1",
@@ -39,7 +39,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
