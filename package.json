@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "Easy project using React, Redux/toolkit, typescript, HTML, SCSS",
-  "homepage": "https://Manhetn.github.io/space-tourism",
+  "homepage": "https://Manhetn.github.io/todo",
   "keywords": [
     "React",
     "Redux/toolkit",
@@ -39,7 +39,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "react-scripts build && gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
