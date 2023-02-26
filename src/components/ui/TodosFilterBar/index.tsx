@@ -25,13 +25,12 @@ const TodosFilterBar: React.FC<ITodosFilterBarProps> = ({
   removeCompletedTodosHandler,
 }) => {
   const theme = useAppSelector(getTheme());
-  // const filters = ['all', 'active', 'completed'];
-  // const classList = `filter-list filter-list--${theme}${
-  //   classes ? ' ' + classes : ''
-  // }`;
+  const classList = `todos-filter-bar todos-filter-bar--${theme}${
+    classes ? ' ' + classes : ''
+  }`;
 
   return (
-    <div className={`todos-filter-bar todos-filter-bar--${theme}`}>
+    <div className={classList}>
       <TodosCounter todos={todos} classes="todos-filter-bar__counter" />
       <TodosFilter
         currentFilter={currentFilter}

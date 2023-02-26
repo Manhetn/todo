@@ -11,7 +11,7 @@
   background-color: inherit;
 
   &:hover {
-    .todo-item__button-cross {
+    #{$this}__button-cross {
       opacity: 1;
     }
   }

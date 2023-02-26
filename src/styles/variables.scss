@@ -1,5 +1,15 @@
-/* Mobile: 375px  */
-/* Desktop: 1440px */
+
+// margin and padding
+$area-bullet: 4px;
+$area-half: 8px;
+$area-base-small: 12px;
+$area-base: 16px;
+$area-base-large: 24px;
+$area-double: 32px;
+$area-treble: 48px;
+$area-quatro: 64px;
+$area-large: 80px;
+$area-largest: 120px;
 
 // Colors
 
@@ -46,6 +56,7 @@ $base-radius: 5px;
 
 // Typography
 $fs-base: 18px;
+$fs-medium: 14px;
 $fs-base-small: 12px;
 $ff-Josefin-Sans: 'Josefin Sans', 'Be Vietnam Pro', sans-serif;
 $fw-regular: 400;
