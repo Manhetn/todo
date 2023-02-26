@@ -1,8 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .check-box {
-  width: 48px;
-  height: 48px;
+  width: $area-treble;
+  height: $area-treble;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,8 +65,8 @@
   }
 
   @media (max-width: 640px) {
-    width: 32px;
-    height: 32px;
+    width: $area-double;
+    height: $area-double;
 
     &__checkbox {
       height: 20px;

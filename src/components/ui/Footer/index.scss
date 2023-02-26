@@ -2,13 +2,13 @@
 
 .footer {
   width: 100%;
-  padding: 24px 0 41px;
+  padding: $area-base-large 0 41px;
   font-size: $fs-medium;
   letter-spacing: -0.2px;
 
   &__container {
     max-width: 1440px;
-    padding: 0 24px;
+    padding: 0 $area-base-large;
     margin: 0 auto;
   }
 

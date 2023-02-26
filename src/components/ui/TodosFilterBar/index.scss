@@ -8,7 +8,7 @@
   border-bottom-left-radius: $base-radius;
   display: flex;
   align-items: center;
-  padding: 18px 24px 16.5px;
+  padding: 18px $area-base-large 16.5px;
   font-size: 14px;
   line-height: 105%;
   letter-spacing: -0.2px;
@@ -53,11 +53,11 @@
 
     &__filter {
       position: absolute;
-      bottom: -64px;
+      bottom: -$area-quatro;
       left: 0;
       right: 0;
       z-index: 2;
-      padding: 18px 24px 16px;
+      padding: 18px $area-base-large $area-base;
       border-radius: $base-radius;
       background-color: inherit;
     }

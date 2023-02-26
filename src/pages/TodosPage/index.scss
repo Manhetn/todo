@@ -9,12 +9,12 @@
   }
 
   &__form {
-    margin-bottom: 24px;
+    margin-bottom: $area-base-large;
   }
 
   @media (max-width: 640px) {
     &__form {
-      margin-bottom: 16px;
+      margin-bottom: $area-base;
     }
   }
 }

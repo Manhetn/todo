@@ -1,5 +1,5 @@
 
-// margin and padding
+// margin and padding 
 $area-bullet: 4px;
 $area-half: 8px;
 $area-base-small: 12px;
@@ -8,19 +8,13 @@ $area-base-large: 24px;
 $area-double: 32px;
 $area-treble: 48px;
 $area-quatro: 64px;
-$area-large: 80px;
-$area-largest: 120px;
 
 // Colors
-
-// Primary
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
 $color-primary-bright-blue: hsl(220, 98%, 61%);
 $color-background-first: hsl(192, 100%, 67%);
 $color-background-second: hsl(280, 87%, 65%);
-
-// Neutral
-$color-white: hsl(0, 0%, 100%);
-$color-black: hsl(0, 0%, 0%);
 
 // Light Theme
 $color-lt-gray-light: hsl(0, 0%, 98%);
